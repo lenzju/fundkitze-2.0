@@ -1,0 +1,5 @@
+streamlit
+supabase
+tensorflow-cpu
+pillow
+numpy
