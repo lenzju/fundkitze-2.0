@@ -1,10 +1,12 @@
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+import os
 
-MODEL_PATH = "model/keras_model.h5"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "model", "keras_model.h5")
 
-model = tf.keras.models.load_model(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 
 CLASS_NAMES = ["Hose", "Mütze", "Pullover"]
 
